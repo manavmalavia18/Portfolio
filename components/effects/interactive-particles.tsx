@@ -15,6 +15,17 @@ export function InteractiveParticles() {
 
         let animationFrameId: number;
         let particles: Particle[] = [];
+        let cachedRect = canvas.getBoundingClientRect();
+        let cachedDpr = window.devicePixelRatio || 1;
+        let cachedIsDark = document.documentElement.classList.contains('dark');
+
+        const themeObserver = new MutationObserver(() => {
+            cachedIsDark = document.documentElement.classList.contains('dark');
+        });
+        themeObserver.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class'],
+        });
 
         class Particle {
             x: number;
@@ -90,15 +101,15 @@ export function InteractiveParticles() {
         }
 
         const resizeCanvas = () => {
-            const rect = canvas.getBoundingClientRect();
-            const dpr = window.devicePixelRatio || 1;
+            cachedRect = canvas.getBoundingClientRect();
+            cachedDpr = window.devicePixelRatio || 1;
 
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
+            canvas.width = cachedRect.width * cachedDpr;
+            canvas.height = cachedRect.height * cachedDpr;
 
-            mouseRef.current.radius = 140 * dpr;
+            mouseRef.current.radius = 140 * cachedDpr;
 
-            initParticles(rect.width, rect.height, dpr);
+            initParticles(cachedRect.width, cachedRect.height, cachedDpr);
         };
 
         const initParticles = (logicalWidth: number, logicalHeight: number, dpr: number) => {
@@ -118,24 +129,19 @@ export function InteractiveParticles() {
         const animate = () => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            const isDark = document.documentElement.classList.contains('dark');
-            const dpr = window.devicePixelRatio || 1;
-
             const mouse = mouseRef.current;
 
             for (let i = 0; i < particles.length; i++) {
-                particles[i].update(canvas.width, canvas.height, mouse, dpr);
-                particles[i].draw(ctx, isDark);
+                particles[i].update(canvas.width, canvas.height, mouse, cachedDpr);
+                particles[i].draw(ctx, cachedIsDark);
             }
 
             animationFrameId = requestAnimationFrame(animate);
         };
 
         const handleMouseMove = (e: MouseEvent) => {
-            const rect = canvas.getBoundingClientRect();
-            const dpr = window.devicePixelRatio || 1;
-            mouseRef.current.x = (e.clientX - rect.left) * dpr;
-            mouseRef.current.y = (e.clientY - rect.top) * dpr;
+            mouseRef.current.x = (e.clientX - cachedRect.left) * cachedDpr;
+            mouseRef.current.y = (e.clientY - cachedRect.top) * cachedDpr;
         };
 
         const handleMouseLeave = () => {
@@ -155,6 +161,7 @@ export function InteractiveParticles() {
             window.removeEventListener("mousemove", handleMouseMove);
             window.removeEventListener("mouseleave", handleMouseLeave);
             cancelAnimationFrame(animationFrameId);
+            themeObserver.disconnect();
         };
     }, []);
 
