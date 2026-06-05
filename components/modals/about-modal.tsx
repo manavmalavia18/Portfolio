@@ -5,9 +5,8 @@ import {
     DialogTitle,
 } from "@/components/ui/dialog";
 
-import { useEffect } from "react";
 import { useLanguage } from "@/providers/language-provider";
-import { useLenis } from "@/providers/smooth-scroll-provider";
+import { useLenisModal } from "@/hooks/use-lenis-modal";
 
 interface AboutModalProps {
     open: boolean;
@@ -16,15 +15,7 @@ interface AboutModalProps {
 
 export function AboutModal({ open, onOpenChange }: AboutModalProps) {
     const { content } = useLanguage();
-    const lenis = useLenis();
-
-    useEffect(() => {
-        if (open) {
-            lenis?.stop();
-        } else {
-            lenis?.start();
-        }
-    }, [open, lenis]);
+    useLenisModal(open);
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>

@@ -8,8 +8,7 @@ import {
 
 import { useLanguage } from "@/providers/language-provider";
 import { ArrowUpRight, Mail, Phone } from "lucide-react";
-import { useEffect } from "react";
-import { useLenis } from "@/providers/smooth-scroll-provider";
+import { useLenisModal } from "@/hooks/use-lenis-modal";
 
 interface ContactModalProps {
     open: boolean;
@@ -18,15 +17,7 @@ interface ContactModalProps {
 
 export function ContactModal({ open, onOpenChange }: ContactModalProps) {
     const { content } = useLanguage();
-    const lenis = useLenis();
-
-    useEffect(() => {
-        if (open) {
-            lenis?.stop();
-        } else {
-            lenis?.start();
-        }
-    }, [open, lenis]);
+    useLenisModal(open);
 
     return (
         <Dialog open={open} onOpenChange={onOpenChange}>

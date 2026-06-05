@@ -6,8 +6,7 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 
-import { useEffect } from "react";
-import { useLenis } from "@/providers/smooth-scroll-provider";
+import { useLenisModal } from "@/hooks/use-lenis-modal";
 import { useLanguage } from "@/providers/language-provider";
 import { Github, ExternalLink } from "lucide-react";
 import Image from "next/image";
@@ -31,16 +30,8 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps) {
-    const lenis = useLenis();
+    useLenisModal(open);
     const { content } = useLanguage();
-
-    useEffect(() => {
-        if (open) {
-            lenis?.stop();
-        } else {
-            lenis?.start();
-        }
-    }, [open, lenis]);
 
     if (!project) return null;
 
