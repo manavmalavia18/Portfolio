@@ -141,119 +141,119 @@
             }
         ]
     },
-    "technologies": {
+    "stack": {
         "frontend": [
             {
                 "name": "React",
-                "icon": "/technologies/react.svg",
+                "icon": "/stack/react.svg",
                 "featured": true
             },
             {
                 "name": "Next.js",
-                "icon": "/technologies/nextjs.svg",
+                "icon": "/stack/nextjs.svg",
                 "featured": true
             },
             {
                 "name": "Tailwind CSS",
-                "icon": "/technologies/tailwindcss.svg",
+                "icon": "/stack/tailwindcss.svg",
                 "featured": true
             },
             {
                 "name": "Bootstrap",
-                "icon": "/technologies/bootstrap.svg"
+                "icon": "/stack/bootstrap.svg"
             },
             {
                 "name": "Framer Motion",
-                "icon": "/technologies/framermotion.svg"
+                "icon": "/stack/framermotion.svg"
             },
             {
                 "name": "TypeScript",
-                "icon": "/technologies/typescript.svg"
+                "icon": "/stack/typescript.svg"
             },
             {
                 "name": "JavaScript",
-                "icon": "/technologies/javascript.svg"
+                "icon": "/stack/javascript.svg"
             },
             {
                 "name": "HTML5",
-                "icon": "/technologies/html5.svg"
+                "icon": "/stack/html5.svg"
             },
             {
                 "name": "CSS3",
-                "icon": "/technologies/css3.svg"
+                "icon": "/stack/css3.svg"
             }
         ],
         "backend": [
             {
                 "name": "Node.js",
-                "icon": "/technologies/nodejs.svg"
+                "icon": "/stack/nodejs.svg"
             },
             {
                 "name": "PHP",
-                "icon": "/technologies/php.svg"
+                "icon": "/stack/php.svg"
             },
             {
                 "name": "Laravel",
-                "icon": "/technologies/laravel.svg",
+                "icon": "/stack/laravel.svg",
                 "featured": true
             },
             {
                 "name": "ASP.NET",
-                "icon": "/technologies/aspnet.svg"
+                "icon": "/stack/aspnet.svg"
             },
             {
                 "name": "Rust",
-                "icon": "/technologies/rust.svg"
+                "icon": "/stack/rust.svg"
             },
             {
                 "name": "C#",
-                "icon": "/technologies/csharp.svg"
+                "icon": "/stack/csharp.svg"
             },
             {
                 "name": "Python",
-                "icon": "/technologies/python.svg"
+                "icon": "/stack/python.svg"
             },
             {
                 "name": "Discord.js",
-                "icon": "/technologies/discordjs.svg"
+                "icon": "/stack/discordjs.svg"
             }
         ],
         "database": [
             {
                 "name": "PostgreSQL",
-                "icon": "/technologies/postgresql.svg",
+                "icon": "/stack/postgresql.svg",
                 "featured": true
             },
             {
                 "name": "MySQL",
-                "icon": "/technologies/mysql.svg",
+                "icon": "/stack/mysql.svg",
                 "featured": true
             },
             {
                 "name": "MongoDB",
-                "icon": "/technologies/mongodb.svg"
+                "icon": "/stack/mongodb.svg"
             },
             {
                 "name": "Prisma",
-                "icon": "/technologies/prisma.svg"
+                "icon": "/stack/prisma.svg"
             },
             {
                 "name": "Neon",
-                "icon": "/technologies/neon.png"
+                "icon": "/stack/neon.png"
             }
         ],
         "tools": [
             {
                 "name": "Git",
-                "icon": "/technologies/git.svg"
+                "icon": "/stack/git.svg"
             },
             {
                 "name": "Vercel",
-                "icon": "/technologies/vercel.svg"
+                "icon": "/stack/vercel.svg"
             },
             {
                 "name": "Tauri",
-                "icon": "/technologies/tauri.svg"
+                "icon": "/stack/tauri.svg"
             }
         ]
     }

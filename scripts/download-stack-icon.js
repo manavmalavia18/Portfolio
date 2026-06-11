@@ -4,7 +4,7 @@ const https = require('https');
 
 const EN_JSON_PATH = path.join(__dirname, '../contents/en.json');
 const TR_JSON_PATH = path.join(__dirname, '../contents/tr.json');
-const OUTPUT_DIR = path.join(__dirname, '../public/technologies');
+const OUTPUT_DIR = path.join(__dirname, '../public/stack');
 
 if (!fs.existsSync(OUTPUT_DIR)) {
     fs.mkdirSync(OUTPUT_DIR, { recursive: true });
@@ -34,16 +34,16 @@ async function run() {
     const enContent = JSON.parse(fs.readFileSync(EN_JSON_PATH, 'utf8'));
     const trContent = JSON.parse(fs.readFileSync(TR_JSON_PATH, 'utf8'));
 
-    const technologies = enContent.technologies;
-    if (!technologies) {
-        console.error("No technologies block found in en.json");
+    const stack = enContent.stack;
+    if (!stack) {
+        console.error("No stack block found in en.json");
         return;
     }
 
     const categories = ['frontend', 'backend', 'database', 'tools'];
     
     for (const category of categories) {
-        const items = technologies[category];
+        const items = stack[category];
         if (!items) continue;
 
         for (const item of items) {
@@ -68,14 +68,14 @@ async function run() {
             
             const filename = `${cleanName}${ext}`;
             const destPath = path.join(OUTPUT_DIR, filename);
-            const localPath = `/technologies/${filename}`;
+            const localPath = `/stack/${filename}`;
 
             console.log(`Downloading ${item.name} from ${url} -> ${filename}...`);
             try {
                 await download(url, destPath);
                 item.icon = localPath;
 
-                const trItem = trContent.technologies?.[category]?.find(t => t.name === item.name);
+                const trItem = trContent.stack?.[category]?.find(t => t.name === item.name);
                 if (trItem) {
                     trItem.icon = localPath;
                 }

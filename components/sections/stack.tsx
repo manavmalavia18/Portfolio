@@ -7,7 +7,7 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import type { TechnologyItem } from "@/types/technology";
+import type { StackItem } from "@/types/stack";
 
 export default function Stack() {
     const { content } = useLanguage();
@@ -15,19 +15,19 @@ export default function Stack() {
     const categories = [
         {
             title: content.frontendStack || "Frontend Technologies",
-            items: content.technologies?.frontend || [],
+            items: content.stack?.frontend || [],
         },
         {
             title: content.backendStack || "Backend Technologies",
-            items: content.technologies?.backend || [],
+            items: content.stack?.backend || [],
         },
         {
             title: content.databaseStack || "Databases & ORMs",
-            items: content.technologies?.database || [],
+            items: content.stack?.database || [],
         },
         {
             title: content.toolsStack || "Tools & Infrastructure",
-            items: content.technologies?.tools || [],
+            items: content.stack?.tools || [],
         },
     ];
 
@@ -59,7 +59,7 @@ export default function Stack() {
                                 </div>
 
                                 <div className="flex items-center gap-6 flex-wrap mb-6">
-                                    {category.items.map((item: TechnologyItem) => (
+                                    {category.items.map((item: StackItem) => (
                                         <HoverCard key={item.name} openDelay={50} closeDelay={50}>
                                             <HoverCardTrigger asChild>
                                                 <div className="group flex items-center gap-3 py-2.5 px-1 shrink-0 cursor-default">
