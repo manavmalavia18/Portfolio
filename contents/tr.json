@@ -27,7 +27,7 @@
                 "category": "Medya Aracı",
                 "year": "2026",
                 "description": "Aether Media, Tauri ile geliştirilmiş güçlü bir masaüstü medya dönüştürücüsüdür. Toplu işlem desteğiyle video, görsel ve ses format dönüşümlerini destekler.",
-                "image": "/20260427093247885.jpg",
+                "image": "/projects/20260427093247885.jpg",
                 "repo": "https://github.com/xkintaro/aether-media",
                 "stack": [
                     "FFmpeg",
@@ -43,7 +43,7 @@
                 "category": "Kütüphane",
                 "year": "2026",
                 "description": "AetherJS, modern web uygulamaları için geliştirilmiş, DOM manipülasyonunu en aza indiren utility-first bir JavaScript kontrolcüsüdür. Karmaşık state yönetimine veda edin.",
-                "image": "/20260427093247620.jpg",
+                "image": "/projects/20260427093247620.jpg",
                 "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
                 "repo": "https://github.com/xkintaro/aether-js",
                 "stack": [
@@ -56,7 +56,7 @@
                 "category": "Web Uygulaması",
                 "year": "2025",
                 "description": "Kintaro File Manager, cyberpunk esintili arayüze sahip, self-hosted bir dosya yönetim uygulamasıdır. SQLite destekli modern ve şık bir web arayüzü üzerinden her tür dosyayı yüklemenize, düzenlemenize, etiketlemenize ve filtrelemenize olanak tanır — harici bir veritabanı gerekmez.",
-                "image": "/20260305210513749.jpg",
+                "image": "/projects/20260305210513749.jpg",
                 "repo": "https://github.com/xkintaro/file-manager",
                 "stack": [
                     "React",
