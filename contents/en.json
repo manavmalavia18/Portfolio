@@ -124,22 +124,10 @@
         ]
     },
     "contact": {
-        "description": "Whether we start fresh to bring a project to life or take an existing system further.",
-        "email": "mustafw42@gmail.com",
-        "phone": "Not added yet."
+        "description": "Whether we start fresh to bring a project to life or take an existing system further."
     },
     "social": {
-        "title": "SOCIAL",
-        "items": [
-            {
-                "label": "GitHub",
-                "href": "https://github.com/xkintaro"
-            },
-            {
-                "label": "Discord",
-                "href": "https://discord.gg/NSQk27Zdkv"
-            }
-        ]
+        "title": "SOCIAL"
     },
     "stack": {
         "frontend": [

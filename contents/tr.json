@@ -124,22 +124,10 @@
         ]
     },
     "contact": {
-        "description": "İster bir projeyi hayata geçirmek için yeni bir başlangıç yapalım, ister mevcut bir sistemi daha ileri taşıyalım.",
-        "email": "mustafw42@gmail.com",
-        "phone": "Henüz eklenmedi."
+        "description": "İster bir projeyi hayata geçirmek için yeni bir başlangıç yapalım, ister mevcut bir sistemi daha ileri taşıyalım."
     },
     "social": {
-        "title": "SOCIAL",
-        "items": [
-            {
-                "label": "GitHub",
-                "href": "https://github.com/xkintaro"
-            },
-            {
-                "label": "Discord",
-                "href": "https://discord.gg/NSQk27Zdkv"
-            }
-        ]
+        "title": "SOCIAL"
     },
     "stack": {
         "frontend": [
