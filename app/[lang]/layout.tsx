@@ -10,7 +10,7 @@ import Navbar from "@/components/layout/navbar";
 import { APP_CONFIG } from "@/lib/constants";
 import { isValidLocale } from "@/lib/i18n";
 import { notFound } from "next/navigation";
-import { getDictionary, getContents } from "@/lib/loaders";
+import { getDictionary, getContents, getSharedData } from "@/lib/loaders";
 
 const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -37,15 +37,16 @@ export default async function LangLayout({
     notFound();
   }
 
-  const [dictionary, contents] = await Promise.all([
+  const [dictionary, contents, shared] = await Promise.all([
     getDictionary(lang),
     getContents(lang),
+    getSharedData(),
   ]);
 
   return (
     <html lang={lang} suppressHydrationWarning>
       <body className={`${inter.variable} ${syne.variable} font-sans bg-background text-foreground antialiased`}>
-        <LanguageProvider lang={lang} dictionary={dictionary} contents={contents}>
+        <LanguageProvider lang={lang} dictionary={dictionary} contents={contents} shared={shared}>
           <ThemeProvider
             attribute="class"
             defaultTheme="dark"

@@ -16,12 +16,13 @@ interface LanguageProviderProps {
     lang: Locale;
     dictionary: Record<string, any>;
     contents: Record<string, any>;
+    shared: Record<string, any>;
 }
 
-export function LanguageProvider({ children, lang, dictionary, contents }: LanguageProviderProps) {
+export function LanguageProvider({ children, lang, dictionary, contents, shared }: LanguageProviderProps) {
     const processedContent = useMemo(
-        () => parseMarkdown(deepMerge(dictionary, contents)),
-        [dictionary, contents],
+        () => parseMarkdown(deepMerge(shared, deepMerge(dictionary, contents))),
+        [dictionary, contents, shared],
     );
 
     return (

@@ -15,3 +15,4 @@ const contents: Record<Locale, Loader> = {
 
 export const getDictionary = (locale: Locale) => dictionaries[locale]();
 export const getContents = (locale: Locale) => contents[locale]();
+export const getSharedData = () => import('@/contents/shared.json').then((m) => m.default);
