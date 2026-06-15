@@ -1,8 +1,4 @@
 {
-    "hero": {
-        "title": "Kurucuların *fikirlerini* sorunsuz dijital deneyimlere dönüştürmelerine *yardım ediyorum*",
-        "stats": "***Startup*** Uyumlu Çözümler"
-    },
     "about": {
         "intro": "*Kendi projeleriyle gelişen* ve fikirleri **ürüne dönüştüren** bir geliştirici.",
         "description": "*Web geliştirme odağında*; frontend ve backend tarafında üretim yapan, yeni teknolojileri **deneyerek öğrenen** ve kodun ***sürdürülebilir olmasına*** önem veren bir yaklaşım.",
@@ -122,5 +118,5 @@
                 ]
             }
         ]
-    }
+    }   
 }
