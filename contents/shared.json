@@ -4,26 +4,24 @@
         "email": "mustafw42@gmail.com",
         "phone": "Not added yet."
     },
-    "social": {
-        "items": [
-            {
-                "label": "GitHub",
-                "href": "https://github.com/xkintaro"
-            },
-            {
-                "label": "Discord",
-                "href": "https://discord.gg/NSQk27Zdkv"
-            },
-            {
-                "label": "Instagram",
-                "href": "https://instagram.com/xkintaro"
-            },
-            {
-                "label": "Linkedin",
-                "href": "https://www.linkedin.com/in/mustafa-tasal/"
-            }
-        ]
-    },
+    "social": [
+        {
+            "label": "GitHub",
+            "href": "https://github.com/xkintaro"
+        },
+        {
+            "label": "Discord",
+            "href": "https://discord.gg/NSQk27Zdkv"
+        },
+        {
+            "label": "Instagram",
+            "href": "https://instagram.com/xkintaro"
+        },
+        {
+            "label": "Linkedin",
+            "href": "https://www.linkedin.com/in/mustafa-tasal/"
+        }
+    ],
     "stack": {
         "frontend": [
             {
