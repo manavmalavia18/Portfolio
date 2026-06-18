@@ -8,6 +8,27 @@ import { ArrowRight, Mouse } from "lucide-react";
 import { ContactModal } from "@/components/modals/contact-modal";
 import { InteractiveParticles } from "@/components/effects/interactive-particles";
 
+const TRACK_1 = [
+    "/hero-slider/makise-kurisu-2.webp",
+    "/hero-slider/atam-1.webp",
+    "/hero-slider/kintaro-2.webp",
+    "/hero-slider/makise-kurisu-1.webp",
+    "/hero-slider/atam-2.webp",
+    "/hero-slider/kintaro-1.webp",
+] as const;
+
+const TRACK_2 = [
+    "/hero-slider/kintaro-1.webp",
+    "/hero-slider/atam-2.webp",
+    "/hero-slider/makise-kurisu-1.webp",
+    "/hero-slider/kintaro-2.webp",
+    "/hero-slider/atam-1.webp",
+    "/hero-slider/makise-kurisu-2.webp",
+] as const;
+
+const COL_1_IMAGES = [...TRACK_1, ...TRACK_1];
+const COL_2_IMAGES = [...TRACK_2, ...TRACK_2];
+
 export default function Hero() {
     const { content } = useLanguage();
     const containerRef = useRef<HTMLDivElement>(null);
@@ -19,26 +40,6 @@ export default function Hero() {
     const y = useTransform(scrollY, [0, 800], [0, -150]);
     const blurValue = useTransform(scrollY, [0, 800], [0, 10]);
     const filter = useMotionTemplate`blur(${blurValue}px)`;
-    const track1 = [
-        "/hero-slider/makise-kurisu-2.webp",
-        "/hero-slider/atam-1.webp",
-        "/hero-slider/kintaro-2.webp",
-        "/hero-slider/makise-kurisu-1.webp",
-        "/hero-slider/atam-2.webp",
-        "/hero-slider/kintaro-1.webp"
-    ];
-
-    const track2 = [
-        "/hero-slider/kintaro-1.webp",
-        "/hero-slider/atam-2.webp",
-        "/hero-slider/makise-kurisu-1.webp",
-        "/hero-slider/kintaro-2.webp",
-        "/hero-slider/atam-1.webp",
-        "/hero-slider/makise-kurisu-2.webp"
-    ];
-
-    const col1Images = [...track1, ...track1];
-    const col2Images = [...track2, ...track2];
 
     const scrollToProjects = useCallback(() => {
         const projectsSection = document.getElementById("projects");
@@ -69,7 +70,7 @@ export default function Hero() {
                         }}
                         className="flex flex-col gap-3 sm:gap-4 pt-4"
                     >
-                        {col1Images.map((src, idx) => (
+                        {COL_1_IMAGES.map((src, idx) => (
                             <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
                                 <Image
                                     src={src}
@@ -94,7 +95,7 @@ export default function Hero() {
                         }}
                         className="flex flex-col gap-3 sm:gap-4 pt-4"
                     >
-                        {col2Images.map((src, idx) => (
+                        {COL_2_IMAGES.map((src, idx) => (
                             <div key={idx} className="w-full aspect-3/4 relative overflow-hidden rounded-4xl border border-border/5">
                                 <Image
                                     src={src}
