@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function Preloader() {
     const [isLoading, setIsLoading] = useState(true);
@@ -86,10 +87,13 @@ export function Preloader() {
 
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md" />
 
-                            <img
-                                src="/favicon.ico"
+                            <Image
+                                src="/logo.png"
                                 alt="Logo"
-                                className="w-14 h-14 object-contain z-10"
+                                width={56}
+                                height={56}
+                                className="object-contain z-10"
+                                priority
                             />
                         </div>
 
