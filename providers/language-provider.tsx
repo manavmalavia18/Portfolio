@@ -6,6 +6,7 @@ import { deepMerge, parseMarkdown } from "@/lib/markdown";
 
 interface LanguageContextType {
     language: Locale;
+    dict: any;
     content: any;
 }
 
@@ -20,13 +21,18 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children, lang, dictionary, contents, shared }: LanguageProviderProps) {
-    const processedContent = useMemo(
-        () => parseMarkdown(deepMerge(shared, deepMerge(dictionary, contents))),
-        [dictionary, contents, shared],
+    const dict = useMemo(
+        () => parseMarkdown(dictionary),
+        [dictionary],
+    );
+
+    const content = useMemo(
+        () => parseMarkdown(deepMerge(shared, contents)),
+        [contents, shared],
     );
 
     return (
-        <LanguageContext.Provider value={{ language: lang, content: processedContent }}>
+        <LanguageContext.Provider value={{ language: lang, dict, content }}>
             {children}
         </LanguageContext.Provider>
     );
