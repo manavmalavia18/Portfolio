@@ -14,7 +14,7 @@ interface AboutModalProps {
 }
 
 export function AboutModal({ open, onOpenChange }: AboutModalProps) {
-    const { content } = useLanguage();
+    const { content, dict } = useLanguage();
     useLenisModal(open);
 
     return (
@@ -28,7 +28,7 @@ export function AboutModal({ open, onOpenChange }: AboutModalProps) {
                 <div className="relative px-8 pt-8 pb-4 shrink-0">
                     <DialogHeader className="gap-3">
                         <DialogTitle className="text-2xl font-bold tracking-tight">
-                            {content.about_title}
+                            {dict.about_title}
                         </DialogTitle>
                     </DialogHeader>
                 </div>

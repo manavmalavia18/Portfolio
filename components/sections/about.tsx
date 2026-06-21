@@ -8,7 +8,7 @@ import { AboutModal } from "@/components/modals/about-modal";
 import { HangingProfile } from "@/components/widgets/hanging-profile";
 
 export default function About() {
-    const { content } = useLanguage();
+    const { content, dict } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -27,7 +27,7 @@ export default function About() {
 
                             <BlurReveal>
                                 <h2 className="title relative z-10">
-                                    {content.about_title}
+                                    {dict.about_title}
                                 </h2>
                             </BlurReveal>
 
@@ -63,7 +63,7 @@ export default function About() {
                                         className="group relative inline-flex cursor-pointer items-center gap-2 text-xl md:text-2xl font-medium py-2"
                                     >
                                         <span className="relative z-10 border-b-2 border-foreground/30 pb-1 group-hover:border-foreground transition-all duration-300">
-                                            {content.read_full_version}
+                                            {dict.read_full_version}
                                         </span>
                                         <ArrowRight className="w-6 h-6" />
                                     </button>

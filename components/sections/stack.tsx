@@ -11,23 +11,23 @@ import {
 import type { StackItem } from "@/types/stack";
 
 export default function Stack() {
-    const { content } = useLanguage();
+    const { content, dict } = useLanguage();
 
     const categories = [
         {
-            title: content.frontendStack || "Frontend Technologies",
+            title: dict.frontendStack || "Frontend Technologies",
             items: content.stack?.frontend || [],
         },
         {
-            title: content.backendStack || "Backend Technologies",
+            title: dict.backendStack || "Backend Technologies",
             items: content.stack?.backend || [],
         },
         {
-            title: content.databaseStack || "Databases & ORMs",
+            title: dict.databaseStack || "Databases & ORMs",
             items: content.stack?.database || [],
         },
         {
-            title: content.toolsStack || "Tools & Infrastructure",
+            title: dict.toolsStack || "Tools & Infrastructure",
             items: content.stack?.tools || [],
         },
     ];
@@ -42,7 +42,7 @@ export default function Stack() {
                     </BlurReveal>
 
                     <BlurReveal>
-                        <h2 className="title">{content.stackTitle || "STACK"}</h2>
+                        <h2 className="title">{dict.stackTitle || "STACK"}</h2>
                     </BlurReveal>
                 </div>
 

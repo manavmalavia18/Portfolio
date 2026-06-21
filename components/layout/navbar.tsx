@@ -10,7 +10,7 @@ import { useLanguage } from "@/providers/language-provider";
 import { useLenis } from "@/providers/smooth-scroll-provider";
 
 export default function Navbar() {
-  const { content } = useLanguage();
+  const { dict } = useLanguage();
   const lenis = useLenis();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [screenWidth, setScreenWidth] = useState(1920);
@@ -36,13 +36,13 @@ export default function Navbar() {
   });
 
   const navLinks = useMemo(() => [
-    { name: content.nav.home, href: "#home" },
-    { name: content.nav.about, href: "#about" },
-    { name: content.nav.stack, href: "#stack" },
-    { name: content.nav.projects, href: "#projects" },
-    { name: content.nav.roadmap, href: "#roadmap" },
-    { name: content.nav.contact, href: "#contact" },
-  ], [content.nav]);
+    { name: dict.nav.home, href: "#home" },
+    { name: dict.nav.about, href: "#about" },
+    { name: dict.nav.stack, href: "#stack" },
+    { name: dict.nav.projects, href: "#projects" },
+    { name: dict.nav.roadmap, href: "#roadmap" },
+    { name: dict.nav.contact, href: "#contact" },
+  ], [dict.nav]);
 
   useEffect(() => {
     if (typeof window !== "undefined") {

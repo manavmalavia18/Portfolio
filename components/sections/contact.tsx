@@ -5,7 +5,7 @@ import { useLanguage } from "@/providers/language-provider";
 import { BlurReveal } from "@/components/effects/blur-reveal";
 
 export default function Contact() {
-    const { content } = useLanguage();
+    const { content, dict } = useLanguage();
 
     return (
         <section className="relative pt-24 md:pt-32 xl:pt-48 bg-background overflow-hidden border-t border-border/50">
@@ -23,12 +23,12 @@ export default function Contact() {
 
                         <BlurReveal>
                             <h2 className="title">
-                                {content.contact_title}
+                                {dict.contact_title}
                             </h2>
                         </BlurReveal>
                         <BlurReveal>
                             <p className="text-lg mt-3 max-w-xl italic font-medium tracking-tight text-foreground/60">
-                                {content.contact_intro_text}
+                                {dict.contact_intro_text}
                             </p>
                         </BlurReveal>
                     </div>
@@ -41,7 +41,7 @@ export default function Contact() {
                             className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
                         >
                             <span className="text-sm font-mono tracking-widest text-muted-foreground uppercase mb-4 md:mb-0 transition-colors duration-500 group-hover:text-foreground">
-                                {content.send_email}
+                                {dict.send_email}
                             </span>
                             <div className="flex items-center gap-8">
                                 <span className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground transition-all duration-500 group-hover:text-primary group-hover:scale-[1.02] origin-left md:origin-right">
@@ -59,7 +59,7 @@ export default function Contact() {
                             className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
                         >
                             <span className="text-sm font-mono tracking-widest text-muted-foreground uppercase mb-4 md:mb-0 transition-colors duration-500 group-hover:text-foreground">
-                                {content.direct_line}
+                                {dict.direct_line}
                             </span>
                             <div className="flex items-center gap-8">
                                 <span className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground transition-all duration-500 group-hover:text-primary group-hover:scale-[1.02] origin-left md:origin-right">
@@ -78,7 +78,7 @@ export default function Contact() {
                     <div className="text-sm font-mono tracking-widest text-muted-foreground uppercase flex items-center gap-4 max-xl:hidden">
                         <span>© 2026</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                        <span>KINTARO. {content.all_rights_reserved}</span>
+                        <span>KINTARO. {dict.all_rights_reserved}</span>
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-4">

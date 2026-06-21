@@ -10,7 +10,7 @@ import { ProjectModal } from "@/components/modals/project-modal";
 import type { ProjectItem } from "@/types/project";
 
 export default function Projects() {
-    const { content } = useLanguage();
+    const { content, dict } = useLanguage();
 
     const isDesktop = useMediaQuery(BREAKPOINTS.xl);
 
@@ -99,13 +99,13 @@ export default function Projects() {
 
                             <BlurReveal>
                                 <h2 className="title">
-                                    {content.projectsTitle}
+                                    {dict.projectsTitle}
                                 </h2>
                             </BlurReveal>
 
                             <BlurReveal>
                                 <p className="mt-4 text-muted-foreground text-lg">
-                                    {content.projectsIntro}
+                                    {dict.projectsIntro}
                                 </p>
                             </BlurReveal>
                         </div>
@@ -137,13 +137,13 @@ export default function Projects() {
 
                                 <BlurReveal>
                                     <h2 className="title">
-                                        {content.projectsTitle}
+                                        {dict.projectsTitle}
                                     </h2>
                                 </BlurReveal>
 
                                 <BlurReveal>
                                     <p className="mt-4 text-5xl font-light leading-tight">
-                                        {content.projectsIntro}
+                                        {dict.projectsIntro}
                                     </p>
                                 </BlurReveal>
 
@@ -151,7 +151,7 @@ export default function Projects() {
                                     <div className="mt-12 flex items-center gap-4">
                                         <div className="h-px w-24 bg-border" />
                                         <span className="text-sm font-mono text-foreground/40">
-                                            {content.projectsScrollText}
+                                            {dict.projectsScrollText}
                                         </span>
                                     </div>
                                 </BlurReveal>
@@ -170,7 +170,7 @@ export default function Projects() {
 
                         <div className="w-[40vw] h-[70vh] shrink-0 flex flex-col justify-center items-center">
                             <h3 className="text-[10vw] font-black tracking-tighter text-border">
-                                {content.projectsEndText}
+                                {dict.projectsEndText}
                             </h3>
                         </div>
                     </motion.div>

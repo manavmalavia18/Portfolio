@@ -20,7 +20,7 @@ interface ProjectModalProps {
 
 export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps) {
     useLenisModal(open);
-    const { content } = useLanguage();
+    const { dict } = useLanguage();
 
     if (!project) return null;
 
@@ -32,7 +32,7 @@ export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps)
             >
                 <DialogHeader className="sr-only">
                     <DialogTitle>{project.title}</DialogTitle>
-                    <DialogDescription>{content?.others?.project_details || "Details about"} {project.title}</DialogDescription>
+                    <DialogDescription>{dict?.others?.project_details || "Details about"} {project.title}</DialogDescription>
                 </DialogHeader>
 
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-primary/50 to-transparent z-10" />
@@ -67,7 +67,7 @@ export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps)
 
                     <div className="p-6 sm:p-10 flex flex-col gap-10">
                         <div>
-                            <h3 className="text-sm tracking-widest text-muted-foreground uppercase mb-4">{content?.others?.about_project || "About the Project"}</h3>
+                            <h3 className="text-sm tracking-widest text-muted-foreground uppercase mb-4">{dict?.others?.about_project || "About the Project"}</h3>
                             <p className="text-lg text-foreground/80 leading-relaxed font-light">
                                 {project.description}
                             </p>
@@ -75,7 +75,7 @@ export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps)
 
                         {project.stack && project.stack.length > 0 && (
                             <div>
-                                <h3 className="text-sm tracking-widest text-muted-foreground uppercase mb-4">{content?.others?.technologies || "Technologies"}</h3>
+                                <h3 className="text-sm tracking-widest text-muted-foreground uppercase mb-4">{dict?.others?.technologies || "Technologies"}</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {project.stack.map((tech) => (
                                         <span
@@ -102,7 +102,7 @@ export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps)
                                             <div className="relative h-full w-8 bg-background/20 dark:bg-foreground/10" />
                                         </div>
                                         <span className="relative z-10 flex items-center gap-2 text-xs sm:text-sm font-medium tracking-widest uppercase">
-                                            {content?.others?.live_demo || "Live Demo"}
+                                            {dict?.others?.live_demo || "Live Demo"}
                                             <ExternalLink className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
                                         </span>
                                     </a>
@@ -119,7 +119,7 @@ export function ProjectModal({ open, onOpenChange, project }: ProjectModalProps)
                                             <div className="relative h-full w-8 bg-foreground/10 dark:bg-background/20" />
                                         </div>
                                         <span className="relative z-10 flex items-center gap-2 text-xs sm:text-sm font-medium tracking-widest uppercase">
-                                            {content?.others?.source_code || "Source Code"}
+                                            {dict?.others?.source_code || "Source Code"}
                                             <Github className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-500 group-hover:rotate-12 group-hover:scale-110" />
                                         </span>
                                     </a>
