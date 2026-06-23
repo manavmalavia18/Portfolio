@@ -15,19 +15,19 @@ export default function Stack() {
 
     const categories = [
         {
-            title: dict.frontendStack || "Frontend Technologies",
+            title: dict.frontendStack,
             items: content.stack?.frontend || [],
         },
         {
-            title: dict.backendStack || "Backend Technologies",
+            title: dict.backendStack,
             items: content.stack?.backend || [],
         },
         {
-            title: dict.databaseStack || "Databases & ORMs",
+            title: dict.databaseStack,
             items: content.stack?.database || [],
         },
         {
-            title: dict.toolsStack || "Tools & Infrastructure",
+            title: dict.toolsStack,
             items: content.stack?.tools || [],
         },
     ];
@@ -42,7 +42,7 @@ export default function Stack() {
                     </BlurReveal>
 
                     <BlurReveal>
-                        <h2 className="title">{dict.stackTitle || "STACK"}</h2>
+                        <h2 className="title">{dict.stackTitle}</h2>
                     </BlurReveal>
                 </div>
 
