@@ -22,9 +22,15 @@ export function HangingProfile() {
   });
 
   useEffect(() => {
-    let animationFrameId: number;
+    let animationFrameId = 0;
+    let isVisible = false;
 
-    const updatePhysics = (time: number) => {
+    const updatePhysics = () => {
+      if (!isVisible) {
+        animationFrameId = 0;
+        return;
+      }
+
       if (!state.current.isDragging) {
 
         state.current.currentLength += (ropeLength - state.current.currentLength) * 0.1;
@@ -66,8 +72,38 @@ export function HangingProfile() {
       animationFrameId = requestAnimationFrame(updatePhysics);
     };
 
-    animationFrameId = requestAnimationFrame(updatePhysics);
-    return () => cancelAnimationFrame(animationFrameId);
+    const startLoop = () => {
+      if (animationFrameId) return;
+      animationFrameId = requestAnimationFrame(updatePhysics);
+    };
+
+    const stopLoop = () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = 0;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          startLoop();
+        } else {
+          stopLoop();
+        }
+      },
+      { threshold: 0 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      stopLoop();
+      observer.disconnect();
+    };
   }, []);
 
   const handlePointerDown = (e: React.PointerEvent) => {
