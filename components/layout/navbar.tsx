@@ -20,20 +20,14 @@ export default function Navbar() {
 
   const { scrollY } = useScroll();
 
-  const bgOpacity = useTransform(scrollY, (val) => Math.min(val / scrollHeight, 1));
-  const backdropBlur = useTransform(scrollY, (val) => Math.min(val / scrollHeight, 1) * 16);
+  const bgOpacity = useTransform(scrollY, [0, scrollHeight], [0, 1]);
+  const backdropBlur = useTransform(scrollY, [0, scrollHeight], [0, 16]);
   const backdropFilter = useMotionTemplate`blur(${backdropBlur}px)`;
 
-  const py = useTransform(scrollY, (val) => {
-    const ratio = Math.min(val / scrollHeight, 1);
-    return 24 - ratio * 12;
-  });
+  const py = useTransform(scrollY, [0, scrollHeight], [24, 12]);
 
   const startWidth = Math.max(screenWidth, containerWidth);
-  const navMaxWidth = useTransform(scrollY, (val) => {
-    const ratio = Math.min(val / scrollHeight, 1);
-    return startWidth - ratio * (startWidth - containerWidth);
-  });
+  const navMaxWidth = useTransform(scrollY, [0, scrollHeight], [startWidth, containerWidth]);
 
   const navLinks = useMemo(() => [
     { name: dict.nav.home, href: "#home" },
