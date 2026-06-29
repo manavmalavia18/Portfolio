@@ -171,10 +171,10 @@ export function HangingProfile() {
         </div>
         <div className="flex flex-col items-center gap-1 pointer-events-none">
           <span className="text-xs font-bold tracking-[0.2em] text-foreground/80">
-            KINTARO
+            MANAV
           </span>
           <span className="text-[10px] uppercase tracking-wider text-muted-foreground">
-            Developer
+            Software Engineer
           </span>
         </div>
 

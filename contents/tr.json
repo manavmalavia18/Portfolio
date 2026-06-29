@@ -1,114 +1,72 @@
 {
     "about": {
-        "intro": "**Temiz ve sürdürülebilir sistemler** kurmaya odaklanan bir *Full Stack Geliştiriciyim*.",
-        "description": "Sürekli **yeni şeyler öğrenmeyi** seven, öğrendiklerini pratiğe dökmeye çalışan biriyim. *Web* ve *masaüstü* uygulamaları geliştiriyorum. Basit, **pratik** ve **sürdürülebilir** araçlarla uğraşmayı seviyorum.",
-        "full": "Selam, ben **Kintaro**; gerçek adım **Mustafa**. Son birkaç yıldır aktif olarak yazılımla uğraşıyorum ve bu süreçte kendimi büyük ölçüde kendi projelerim ve denemelerim üzerinden geliştirdim.\n\nAğırlıklı olarak web geliştirme tarafında çalışıyorum; *React*, *Next.js*, *Laravel*, *TailwindCSS*, *PostgreSQL* ve *MySQL* gibi teknolojileri kullanıyorum. Bunların yanında *WinForms*, *C#* ve *Rust* ile masaüstü uygulamaları, *FFmpeg* ve *yt-dlp* gibi araçlarla da çeşitli projeler geliştiriyorum.\n\nYeni bir teknoloji ya da araç gördüğümde genellikle denemeye başlıyorum; öğrenmeyi seven biriyim ve bu da beni sürekli farklı alanlara çekiyor.\n\nProjelerimin olabildiğince **temiz, anlaşılır ve sürdürülebilir** olmasına önem veriyorum. Bu konuda biraz **takıntılıyım**; bazen gereksiz olduğunu bilsem bile kendi işimi zorlaştırabiliyorum.\n\nŞu anki hedefim, özellikle **backend ve sistem tasarımı** alanında gelişmek ve projelerimi daha profesyonel hale getirmek. Bunun yanında kendi sistemlerimi, kütüphanelerimi ve basit, pratik araçlar üretmek istiyorum."
+        "intro": "I'm a *Software Engineer* who builds across the **full stack**, **cloud infrastructure**, **data systems**, and **AI-assisted DevOps**.",
+        "description": "From **React** and **TypeScript** frontends to **Go**, **Python**, and **Java** backends — I design microservices, secure APIs, CI/CD pipelines, observability stacks, and production platforms on **AWS**, **GCP**, and **Azure**.",
+        "full": "Hi, I'm **Manav Malavia** — a Software Engineer who works across the full software lifecycle: product development, backend architecture, cloud infrastructure, data workflows, and AI-powered operations tooling.\n\n**Languages & foundations:** Python, TypeScript, JavaScript, Go, Java, C#/.NET, SQL, Bash, HTML, and CSS.\n\n**Frameworks & APIs:** React, Next.js, FastAPI, Flask, Django, Node.js, Spring Boot, REST APIs, WebSocket, microservices, Swagger/OpenAPI, Socket.IO, OAuth 2.0, and JWT.\n\n**Databases & messaging:** PostgreSQL, MongoDB, MySQL, Redis, Kafka, Celery, RabbitMQ, data pipelines, async processing, and query optimization.\n\n**Cloud & infrastructure:** AWS, GCP, Azure, Docker, Kubernetes, Terraform, Helm, Argo CD, GitHub Actions, GitLab CI/CD, Linux, NGINX, AWS Cognito, EKS, and GKE.\n\n**Observability & tooling:** Prometheus, Grafana, Sentry, CloudWatch, Git, Playwright, Cypress, Jira, Stripe, Twilio, Microsoft Graph, Tableau, Pandas, NumPy, Claude API, Cursor AI, and Claude Code.\n\nAt **PittBos**, I ship contractor-facing features weekly with React and TypeScript, modernize monolith workflows into Go microservices, secure accounts with OAuth2/JWT/AWS Cognito, automate billing with Stripe and Twilio, and operate releases on AWS with Docker, NGINX, GitLab CI/CD, and Sentry.\n\nAt **Allthenticate**, I built passwordless auth in Flask with Socket.IO, accelerated CI/CD with Docker executors, deployed on AWS EKS with Terraform/Helm/Argo CD, and expanded observability with Prometheus, Grafana, and Alertmanager.\n\nAt **Northeastern Access Control Systems**, I improved Java/Spring Boot workflows, modernized 20+ internal screens, and automated reporting with Python, SQL, Pandas, NumPy, and Tableau.\n\nI also built **DebugPilot**, an AI-powered DevOps incident debugger using FastAPI, React, Claude API, RAG, Kafka, Redis, Terraform, Helm, Argo CD, and multi-cloud Kubernetes deployments.\n\n**Education:** M.S. Computer Engineering, Northeastern University (GPA 3.8) · B.S. Information Technology, University of Mumbai (GPA 3.5)."
     },
     "manifesto": [
-        "RADICAL TRANSPARENCY",
-        "INTENTIONAL MINIMALISM",
-        "ARCHITECTURAL INTEGRITY",
-        "FIRST PRINCIPLES THINKING",
-        "PERFORMANCE WITHOUT COMPROMISE",
-        "SCALABLE VISION"
+        "FULL-STACK OWNERSHIP",
+        "CLOUD-NATIVE BY DEFAULT",
+        "OBSERVABILITY EVERYWHERE",
+        "AUTOMATE THE TOIL",
+        "AI-ASSISTED ENGINEERING",
+        "SHIP WITH CONFIDENCE"
     ],
     "projects": [
         {
             "id": "1",
-            "title": "Aether Media",
-            "category": "Medya Aracı",
-            "year": "2026",
-            "description": "Aether Media, kullanıcıların medya dosyalarını (video, ses, görsel) toplu olarak hızlı, güvenli ve kolay bir şekilde dönüştürmelerini, sıkıştırmalarını, boyutlandırmalarını ve yeniden isimlendirmelerini sağlayan bir medya işleme aracıdır.\n\nRust dilinin performansı ve Tauri'nin hafif yapısı üzerine inşa edilmiştir. Arka planda FFmpeg'in gücünü kullanarak, karmaşık medya işlemlerini modern bir arayüzle sunar. Dosyalarınız asla bir sunucuya yüklenmez; tüm işlemler tamamen yerel olarak kendi cihazınızda gerçekleşir.",
-            "image": "/projects/20260427093247885.jpg",
-            "repo": "https://github.com/xkintaro/aether-media",
-            "stack": [
-                "FFmpeg",
-                "Rust",
-                "Tauri",
-                "React",
-                "TailwindCSS"
-            ]
-        },
-        {
-            "id": "2",
-            "title": "Aether JS",
-            "category": "Kütüphane",
-            "year": "2026",
-            "description": "Aether JS, modern web geliştirme için tasarlanmış, headless ve utility-first bir JavaScript etkileşim yöneticisidir. Karmaşık JavaScript kodları yazmak yerine, yalnızca HTML data-aether-* niteliklerini kullanarak tamamen erişilebilir (a11y) modallar, sekmeler ve akordeonlar oluşturmanızı sağlar. TailwindCSS ve benzeri framework'lerle kusursuz uyum sağlayan kütüphane, stili tamamen size bırakarak durum yönetimine odaklanır. Odak hapsetme, dinamik DOM gözlemi, URL senkronizasyonu ve tema yönetimi sunar.",
-            "image": "/projects/20260427093247620.jpg",
-            "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
-            "repo": "https://github.com/xkintaro/aether-js",
-            "stack": [
-                "JavaScript"
-            ]
-        },
-        {
-            "id": "3",
-            "title": "File Manager",
-            "category": "Web Uygulaması",
+            "title": "DebugPilot",
+            "category": "AIOps / DevOps",
             "year": "2025",
-            "description": "File Manager, cyberpunk esintili bir arayüze sahip, self-hosted bir dosya yönetimi uygulamasıdır. SQLite destekli şık ve modern bir web arayüzü üzerinden her türlü dosyayı yüklemenize, düzenlemenize, etiketlemenize ve filtrelemenize olanak tanır — harici bir veritabanı gerektirmez.\n\nTüm dosyalar yerel olarak makinenizde saklanır — bulut yok, üçüncü taraf sunucular yok. Dosyalarınızı yükleyin, etiketler ve anahtar kelimeler atayın ve güçlü filtreleme ile anında bulun. Uygulama, resimler ve videolar için otomatik olarak thumbnails oluşturarak tüm arşivinize görsel bir genel bakış sunar.",
-            "image": "/projects/20260305210513749.jpg",
-            "repo": "https://github.com/xkintaro/file-manager",
+            "description": "An AI-powered DevOps incident debugger that ingests Kubernetes, Terraform, and CI logs and returns root-cause diagnoses with actionable fix steps.\n\nBuilt with FastAPI, React, Claude API, and runbook-grounded RAG. Deployed across AWS EKS and GCP GKE with Terraform, Helm, Argo CD, and DNS failover — plus an event-driven Kafka and GitHub webhook pipeline, Redis caching, and GitHub Actions CI/CD for hands-free updates.",
+            "image": "/projects/20260427093247885.jpg",
+            "repo": "https://github.com/manavmalavia18/DebugPilot",
             "stack": [
+                "FastAPI",
                 "React",
-                "TailwindCSS",
-                "Node.js",
-                "SQLite"
+                "Claude API",
+                "RAG",
+                "Kafka",
+                "Redis",
+                "AWS EKS",
+                "GCP GKE",
+                "Terraform",
+                "Helm",
+                "Argo CD",
+                "GitHub Actions"
             ]
         }
     ],
     "roadmap": [
         {
             "id": "01",
-            "year": "2022",
-            "description": "Yazılımla ilk kez lisede tanıştım. Nesne tabanlı programlama dersinde C# kullanarak programlamanın temellerini ve mantığını öğrendim.",
-            "stack": [
-                "C#"
-            ]
+            "year": "2018",
+            "description": "Started B.S. in Information Technology at the University of Mumbai — building foundations in Java, SQL, HTML, CSS, and software engineering fundamentals.",
+            "stack": ["Java", "SQL", "HTML", "CSS", "Bash"]
         },
         {
             "id": "02",
-            "year": "2023",
-            "description": "HTML, CSS ve ASP.NET öğrenerek statik ve dinamik web siteleri geliştirmeye başladım. Bu dönemde projelerimde veritabanı kullanmayı da öğrendim.",
-            "stack": [
-                "HTML",
-                "CSS",
-                "ASP.NET",
-                "MySQL"
-            ]
+            "year": "2022",
+            "description": "Pursued M.S. in Computer Engineering at Northeastern University (GPA 3.8) — cloud computing, algorithms, data science, Python, and agile development.",
+            "stack": ["Python", "Cloud Computing", "Data Science", "SQL"]
         },
         {
             "id": "03",
             "year": "2024",
-            "description": "Lisedeki son yılımdı. CSS ile arayüz geliştirme konusunda kendimi iyice ilerlettim ve staj yaptığım yerde ASP.NET ile çalışmaya devam ettim.",
-            "stack": [
-                "HTML",
-                "CSS",
-                "ASP.NET",
-                "MySQL"
-            ]
+            "description": "Software Engineer at Northeastern Access Control Systems — Java, Spring Boot, JavaScript, Python, Pandas, NumPy, SQL, and 20+ Tableau dashboards for access-management workflows.",
+            "stack": ["Java", "Spring Boot", "Python", "Pandas", "NumPy", "Tableau", "SQL"]
         },
         {
             "id": "04",
-            "year": "2025",
-            "description": "Lise sonrasında React, Node.js, Tailwind CSS ve MongoDB gibi modern teknolojilere yöneldim. Bu süreçte birçok web sitesi ve uygulama geliştirdim. Ek olarak Python ile kendi kullanımıma yönelik çeşitli araçlar yazmaya başladım.",
-            "stack": [
-                "React",
-                "Node.js",
-                "TailwindCSS",
-                "MongoDB"
-            ]
+            "year": "2024",
+            "description": "Software Engineer at Allthenticate — Flask, Socket.IO, Terraform, AWS EKS, Docker, Helm, Argo CD, Celery, Redis, Prometheus, Grafana, and GitLab CI/CD.",
+            "stack": ["Flask", "Socket.IO", "Terraform", "Kubernetes", "Celery", "Prometheus", "Grafana", "GitLab CI/CD"]
         },
         {
             "id": "05",
-            "year": "2026",
-            "description": "PostAjans'ta stajyer olarak çalışmaya başladım ve burada ağırlıklı olarak Laravel üzerine yoğunlaştım. Bunun yanında boş zamanlarımda Next.js ile web projeleri geliştiriyor; Tauri, FFmpeg gibi teknolojileri de kullanarak çeşitli kişisel projeler üretiyorum.",
-            "stack": [
-                "Laravel",
-                "Next.js",
-                "PostgreSQL"
-            ]
+            "year": "2025",
+            "description": "Software Engineer at PittBos — React, TypeScript, Go microservices, PostgreSQL, MongoDB, Redis, OAuth2, JWT, AWS Cognito, Stripe, Twilio, Docker, NGINX, GitLab CI/CD, Sentry, Cypress, and Playwright.",
+            "stack": ["React", "TypeScript", "Go", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Stripe", "Twilio", "Playwright"]
         }
     ]
 }

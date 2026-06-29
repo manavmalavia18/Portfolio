@@ -16,8 +16,28 @@ const syne = Syne({ subsets: ["latin"], variable: "--font-syne" });
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: APP_CONFIG.NAME,
+  metadataBase: new URL(APP_CONFIG.URL),
+  title: {
+    default: `${APP_CONFIG.NAME} | Software Engineer`,
+    template: `%s | ${APP_CONFIG.NAME}`,
+  },
   description: APP_CONFIG.DESC,
+  openGraph: {
+    title: APP_CONFIG.NAME,
+    description: APP_CONFIG.DESC,
+    url: APP_CONFIG.URL,
+    siteName: APP_CONFIG.NAME,
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: APP_CONFIG.NAME,
+    description: APP_CONFIG.DESC,
+  },
+  alternates: {
+    canonical: APP_CONFIG.URL,
+  },
 };
 
 export function generateStaticParams() {

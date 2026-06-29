@@ -38,7 +38,7 @@ async function run() {
         return;
     }
 
-    const categories = ['frontend', 'backend', 'database', 'tools'];
+    const categories = ['languages', 'frameworks', 'databases', 'messaging', 'cloud', 'tools'];
     let downloadCount = 0;
 
     for (const category of categories) {

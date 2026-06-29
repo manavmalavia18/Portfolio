@@ -1,114 +1,72 @@
 {
     "about": {
-        "intro": "I'm a *Full Stack Developer* focused on building **clean and sustainable systems**.",
-        "description": "I'm someone who loves **learning new things** and constantly tries to put what I learn into practice. I develop *web* and *desktop* applications. I enjoy working with simple, **practical**, and **sustainable** tools.",
-        "full": "Hi, I'm **Kintaro**; my real name is **Mustafa**. I have been actively involved in software development for the past few years, mostly self-taught through my own projects and experiments.\n\nI mainly work on web development, using technologies like *React*, *Next.js*, *Laravel*, *TailwindCSS*, *PostgreSQL*, and *MySQL*. Along with these, I develop desktop applications with *WinForms*, *C#*, and *Rust*, as well as various projects utilizing tools like *FFmpeg* and *yt-dlp*.\n\nWhenever I see a new technology or tool, I usually start experimenting with it; I love learning, which constantly draws me to different areas.\n\nI pay great attention to making my projects as **clean, understandable, and sustainable** as possible. I'm a bit **obsessive** about this; sometimes I make things harder for myself even when I know it's unnecessary.\n\nMy current goal is to specialize in **backend and system design** and make my projects more professional. In addition to this, I want to build my own systems, libraries, and simple, practical tools."
+        "intro": "I'm a *Software Engineer* who builds across the **full stack**, **cloud infrastructure**, **data systems**, and **AI-assisted DevOps**.",
+        "description": "From **React** and **TypeScript** frontends to **Go**, **Python**, and **Java** backends — I design microservices, secure APIs, CI/CD pipelines, observability stacks, and production platforms on **AWS**, **GCP**, and **Azure**.",
+        "full": "Hi, I'm **Manav Malavia** — a Software Engineer who works across the full software lifecycle: product development, backend architecture, cloud infrastructure, data workflows, and AI-powered operations tooling.\n\n**Languages & foundations:** Python, TypeScript, JavaScript, Go, Java, C#/.NET, SQL, Bash, HTML, and CSS.\n\n**Frameworks & APIs:** React, Next.js, FastAPI, Flask, Django, Node.js, Spring Boot, REST APIs, WebSocket, microservices, Swagger/OpenAPI, Socket.IO, OAuth 2.0, and JWT.\n\n**Databases & messaging:** PostgreSQL, MongoDB, MySQL, Redis, Kafka, Celery, RabbitMQ, data pipelines, async processing, and query optimization.\n\n**Cloud & infrastructure:** AWS, GCP, Azure, Docker, Kubernetes, Terraform, Helm, Argo CD, GitHub Actions, GitLab CI/CD, Linux, NGINX, AWS Cognito, EKS, and GKE.\n\n**Observability & tooling:** Prometheus, Grafana, Sentry, CloudWatch, Git, Playwright, Cypress, Jira, Stripe, Twilio, Microsoft Graph, Tableau, Pandas, NumPy, Claude API, Cursor AI, and Claude Code.\n\nAt **PittBos**, I ship contractor-facing features weekly with React and TypeScript, modernize monolith workflows into Go microservices, secure accounts with OAuth2/JWT/AWS Cognito, automate billing with Stripe and Twilio, and operate releases on AWS with Docker, NGINX, GitLab CI/CD, and Sentry.\n\nAt **Allthenticate**, I built passwordless auth in Flask with Socket.IO, accelerated CI/CD with Docker executors, deployed on AWS EKS with Terraform/Helm/Argo CD, and expanded observability with Prometheus, Grafana, and Alertmanager.\n\nAt **Northeastern Access Control Systems**, I improved Java/Spring Boot workflows, modernized 20+ internal screens, and automated reporting with Python, SQL, Pandas, NumPy, and Tableau.\n\nI also built **DebugPilot**, an AI-powered DevOps incident debugger using FastAPI, React, Claude API, RAG, Kafka, Redis, Terraform, Helm, Argo CD, and multi-cloud Kubernetes deployments.\n\n**Education:** M.S. Computer Engineering, Northeastern University (GPA 3.8) · B.S. Information Technology, University of Mumbai (GPA 3.5)."
     },
     "manifesto": [
-        "RADICAL TRANSPARENCY",
-        "INTENTIONAL MINIMALISM",
-        "ARCHITECTURAL INTEGRITY",
-        "FIRST PRINCIPLES THINKING",
-        "PERFORMANCE WITHOUT COMPROMISE",
-        "SCALABLE VISION"
+        "FULL-STACK OWNERSHIP",
+        "CLOUD-NATIVE BY DEFAULT",
+        "OBSERVABILITY EVERYWHERE",
+        "AUTOMATE THE TOIL",
+        "AI-ASSISTED ENGINEERING",
+        "SHIP WITH CONFIDENCE"
     ],
     "projects": [
         {
             "id": "1",
-            "title": "Aether Media",
-            "category": "Media Tool",
-            "year": "2026",
-            "description": "Aether Media is a media processing tool that allows users to batch convert, compress, resize, and rename media files (video, audio, image) quickly, securely, and easily.\n\nBuilt on the performance of Rust and the lightweight nature of Tauri. Using the power of FFmpeg in the background, it offers complex media operations with a modern interface. Your files are never uploaded to a server; all processes take place entirely locally on your own device.",
-            "image": "/projects/20260427093247885.jpg",
-            "repo": "https://github.com/xkintaro/aether-media",
-            "stack": [
-                "FFmpeg",
-                "Rust",
-                "Tauri",
-                "React",
-                "TailwindCSS"
-            ]
-        },
-        {
-            "id": "2",
-            "title": "Aether JS",
-            "category": "Library",
-            "year": "2026",
-            "description": "Aether JS is a headless, utility-first JavaScript interaction controller designed for modern web development. It enables you to build fully accessible (a11y) UIs—like modals, tabs, and accordions—using only HTML data-aether-* attributes, without writing complex JavaScript. Perfectly suited for TailwindCSS and similar frameworks, it focuses on state management while leaving the styling entirely to you. Features include focus trapping, dynamic DOM observation, URL syncing, and theme management.",
-            "image": "/projects/20260427093247620.jpg",
-            "demo": "https://xkintaro.github.io/aether-js-documentation/en.html",
-            "repo": "https://github.com/xkintaro/aether-js",
-            "stack": [
-                "JavaScript"
-            ]
-        },
-        {
-            "id": "3",
-            "title": "File Manager",
-            "category": "Web Application",
+            "title": "DebugPilot",
+            "category": "AIOps / DevOps",
             "year": "2025",
-            "description": "File Manager is a self-hosted file management application with a cyberpunk-inspired interface. It lets you upload, organize, tag, and filter any type of file through a sleek, modern web interface backed by SQLite — no external database required.\n\nAll files are stored locally on your machine — no cloud, no third-party servers. Upload your files, assign tags and keywords, and find them instantly with powerful filtering. The application automatically generates thumbnails for images and videos, giving you a visual overview of your entire archive.",
-            "image": "/projects/20260305210513749.jpg",
-            "repo": "https://github.com/xkintaro/file-manager",
+            "description": "An AI-powered DevOps incident debugger that ingests Kubernetes, Terraform, and CI logs and returns root-cause diagnoses with actionable fix steps.\n\nBuilt with FastAPI, React, Claude API, and runbook-grounded RAG. Deployed across AWS EKS and GCP GKE with Terraform, Helm, Argo CD, and DNS failover — plus an event-driven Kafka and GitHub webhook pipeline, Redis caching, and GitHub Actions CI/CD for hands-free updates.",
+            "image": "/projects/20260427093247885.jpg",
+            "repo": "https://github.com/manavmalavia18/DebugPilot",
             "stack": [
+                "FastAPI",
                 "React",
-                "TailwindCSS",
-                "Node.js",
-                "SQLite"
+                "Claude API",
+                "RAG",
+                "Kafka",
+                "Redis",
+                "AWS EKS",
+                "GCP GKE",
+                "Terraform",
+                "Helm",
+                "Argo CD",
+                "GitHub Actions"
             ]
         }
     ],
     "roadmap": [
         {
             "id": "01",
-            "year": "2022",
-            "description": "I first got introduced to software development in high school. I learned the fundamentals and logic of programming using C# in an object-oriented programming class.",
-            "stack": [
-                "C#"
-            ]
+            "year": "2018",
+            "description": "Started B.S. in Information Technology at the University of Mumbai — building foundations in Java, SQL, HTML, CSS, and software engineering fundamentals.",
+            "stack": ["Java", "SQL", "HTML", "CSS", "Bash"]
         },
         {
             "id": "02",
-            "year": "2023",
-            "description": "I started developing static and dynamic websites by learning HTML, CSS, and ASP.NET. During this period, I also learned how to use databases in my projects.",
-            "stack": [
-                "HTML",
-                "CSS",
-                "ASP.NET",
-                "MySQL"
-            ]
+            "year": "2022",
+            "description": "Pursued M.S. in Computer Engineering at Northeastern University (GPA 3.8) — cloud computing, algorithms, data science, Python, and agile development.",
+            "stack": ["Python", "Cloud Computing", "Data Science", "SQL"]
         },
         {
             "id": "03",
             "year": "2024",
-            "description": "It was my last year of high school. I significantly improved my UI development skills with CSS and continued working with ASP.NET at my internship.",
-            "stack": [
-                "HTML",
-                "CSS",
-                "ASP.NET",
-                "MySQL"
-            ]
+            "description": "Software Engineer at Northeastern Access Control Systems — Java, Spring Boot, JavaScript, Python, Pandas, NumPy, SQL, and 20+ Tableau dashboards for access-management workflows.",
+            "stack": ["Java", "Spring Boot", "Python", "Pandas", "NumPy", "Tableau", "SQL"]
         },
         {
             "id": "04",
-            "year": "2025",
-            "description": "After high school, I turned to modern technologies like React, Node.js, Tailwind CSS, and MongoDB. During this period, I developed many websites and applications. Additionally, I started writing various tools in Python for my personal use.",
-            "stack": [
-                "React",
-                "Node.js",
-                "TailwindCSS",
-                "MongoDB"
-            ]
+            "year": "2024",
+            "description": "Software Engineer at Allthenticate — Flask, Socket.IO, Terraform, AWS EKS, Docker, Helm, Argo CD, Celery, Redis, Prometheus, Grafana, and GitLab CI/CD.",
+            "stack": ["Flask", "Socket.IO", "Terraform", "Kubernetes", "Celery", "Prometheus", "Grafana", "GitLab CI/CD"]
         },
         {
             "id": "05",
-            "year": "2026",
-            "description": "I started working as an intern at PostAjans, where I focused mainly on Laravel. In addition, I develop web projects using Next.js in my free time and build various personal projects utilizing technologies like Tauri and FFmpeg.",
-            "stack": [
-                "Laravel",
-                "Next.js",
-                "PostgreSQL"
-            ]
+            "year": "2025",
+            "description": "Software Engineer at PittBos — React, TypeScript, Go microservices, PostgreSQL, MongoDB, Redis, OAuth2, JWT, AWS Cognito, Stripe, Twilio, Docker, NGINX, GitLab CI/CD, Sentry, Cypress, and Playwright.",
+            "stack": ["React", "TypeScript", "Go", "PostgreSQL", "MongoDB", "Redis", "AWS", "Docker", "Stripe", "Twilio", "Playwright"]
         }
     ]
 }

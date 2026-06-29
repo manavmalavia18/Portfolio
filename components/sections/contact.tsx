@@ -3,6 +3,7 @@
 import { ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/providers/language-provider";
 import { BlurReveal } from "@/components/effects/blur-reveal";
+import { APP_CONFIG } from "@/lib/constants";
 
 export default function Contact() {
     const { content, dict } = useLanguage();
@@ -55,6 +56,26 @@ export default function Contact() {
                     </BlurReveal>
                     <BlurReveal>
                         <a
+                            href={APP_CONFIG.RESUME_PATH}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
+                        >
+                            <span className="text-sm font-mono tracking-widest text-muted-foreground uppercase mb-4 md:mb-0 transition-colors duration-500 group-hover:text-foreground">
+                                {dict.downloadResume}
+                            </span>
+                            <div className="flex items-center gap-8">
+                                <span className="text-2xl lg:text-3xl font-semibold tracking-tight text-foreground transition-all duration-500 group-hover:text-primary group-hover:scale-[1.02] origin-left md:origin-right">
+                                    Resume_Manav_Malavia.pdf
+                                </span>
+                                <div className="w-10 h-10 rounded-full border border-border/50 items-center justify-center bg-background group-hover:bg-foreground group-hover:border-foreground transition-all duration-700 shrink-0 opacity-0 -translate-x-8 group-hover:opacity-100 group-hover:translate-x-0 hidden md:flex">
+                                    <ArrowUpRight className="w-6 h-6 text-foreground group-hover:text-background transition-colors duration-500" />
+                                </div>
+                            </div>
+                        </a>
+                    </BlurReveal>
+                    <BlurReveal>
+                        <a
                             href={`tel:${content.contact.phone.replace(/\s+/g, '')}`}
                             className="group flex flex-col md:flex-row md:items-center justify-between py-10 md:py-14 border-b border-border/50 transition-all duration-700 hover:px-8"
                         >
@@ -78,7 +99,7 @@ export default function Contact() {
                     <div className="text-sm font-mono tracking-widest text-muted-foreground uppercase flex items-center gap-4 max-xl:hidden">
                         <span>© 2026</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                        <span>KINTARO. {dict.allRightsReserved}</span>
+                        <span>Manav Malavia. {dict.allRightsReserved}</span>
                     </div>
 
                     <div className="flex flex-wrap items-center justify-center gap-4">

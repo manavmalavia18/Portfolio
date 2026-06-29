@@ -10,27 +10,32 @@ import {
 } from "@/components/ui/hover-card";
 import type { StackItem } from "@/types/stack";
 
+const STACK_CATEGORY_KEYS = [
+    "languages",
+    "frameworks",
+    "databases",
+    "messaging",
+    "cloud",
+    "tools",
+] as const;
+
+const STACK_CATEGORY_LABELS: Record<typeof STACK_CATEGORY_KEYS[number], string> = {
+    languages: "languagesStack",
+    frameworks: "frameworksStack",
+    databases: "databaseStack",
+    messaging: "messagingStack",
+    cloud: "cloudStack",
+    tools: "toolsStack",
+};
+
 export default function Stack() {
     const { content, dict } = useLanguage();
 
-    const categories = [
-        {
-            title: dict.frontendStack,
-            items: content.stack?.frontend || [],
-        },
-        {
-            title: dict.backendStack,
-            items: content.stack?.backend || [],
-        },
-        {
-            title: dict.databaseStack,
-            items: content.stack?.database || [],
-        },
-        {
-            title: dict.toolsStack,
-            items: content.stack?.tools || [],
-        },
-    ];
+    const categories = STACK_CATEGORY_KEYS.map((key) => ({
+        key,
+        title: dict[STACK_CATEGORY_LABELS[key]] as string,
+        items: (content.stack?.[key] as StackItem[]) || [],
+    })).filter((category) => category.items.length > 0);
 
     return (
         <section className="w-full bg-background text-foreground overflow-hidden relative py-16 md:py-24 lg:py-32 xl:py-40 2xl:py-36">
@@ -44,11 +49,17 @@ export default function Stack() {
                     <BlurReveal>
                         <h2 className="title">{dict.stackTitle}</h2>
                     </BlurReveal>
+
+                    <BlurReveal>
+                        <p className="text-base md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
+                            {dict.stackIntro}
+                        </p>
+                    </BlurReveal>
                 </div>
 
                 <div className="flex flex-col gap-container mb-6">
                     {categories.map((category, catIndex) => (
-                        <BlurReveal key={category.title}>
+                        <BlurReveal key={category.key}>
                             <div>
                                 <div className="flex items-center gap-3 mb-6">
                                     <span className="text-[10px] font-mono tracking-widest text-muted-foreground/40">

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="28" fill="currentColor" opacity="0.08"/>
+  <text x="60" y="72" text-anchor="middle" font-family="system-ui, sans-serif" font-size="42" font-weight="800" fill="currentColor" letter-spacing="-2">MM</text>
+</svg>

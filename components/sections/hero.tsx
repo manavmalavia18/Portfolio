@@ -4,26 +4,27 @@ import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { useScroll, useTransform, useMotionTemplate, motion } from "framer-motion";
 import { useLanguage } from "@/providers/language-provider";
-import { ArrowRight, Mouse } from "lucide-react";
+import { ArrowRight, FileDown, Mouse } from "lucide-react";
 import { ContactModal } from "@/components/modals/contact-modal";
 import { InteractiveParticles } from "@/components/effects/interactive-particles";
+import { APP_CONFIG } from "@/lib/constants";
 
 const TRACK_1 = [
-    "/hero-slider/makise-kurisu-2.webp",
-    "/hero-slider/atam-1.webp",
-    "/hero-slider/kintaro-2.webp",
-    "/hero-slider/makise-kurisu-1.webp",
-    "/hero-slider/atam-2.webp",
-    "/hero-slider/kintaro-1.webp",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
 ] as const;
 
 const TRACK_2 = [
-    "/hero-slider/kintaro-1.webp",
-    "/hero-slider/atam-2.webp",
-    "/hero-slider/makise-kurisu-1.webp",
-    "/hero-slider/kintaro-2.webp",
-    "/hero-slider/atam-1.webp",
-    "/hero-slider/makise-kurisu-2.webp",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
+    "/projects/20260427093247885.jpg",
 ] as const;
 
 const COL_1_IMAGES = [...TRACK_1, ...TRACK_1];
@@ -148,10 +149,10 @@ export default function Hero() {
                 <div className="w-full mt-auto flex flex-col justify-center relative z-20 mix-blend-difference">
                     <div className="overflow-hidden">
                         <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl 3xl:text-[140px] font-black tracking-tighter leading-[0.85] text-foreground uppercase whitespace-nowrap">
-                            Kintaro
+                            Manav
                             <br />
                             <span className="text-foreground/80">
-                                Portfolio
+                                Malavia
                             </span>
                         </h1>
                     </div>
@@ -185,6 +186,19 @@ export default function Hero() {
                                 {dict.exploreProjects}
                             </span>
                         </button>
+
+                        <a
+                            href={APP_CONFIG.RESUME_PATH}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            download
+                            className="w-fit group relative flex h-12 xl:h-16 cursor-pointer items-center justify-center px-6 xl:px-10 text-muted-foreground transition-all duration-500 hover:text-foreground hover:bg-secondary/15 rounded-full border border-border/50 hover:border-border backdrop-blur-sm"
+                        >
+                            <span className="relative z-10 text-xs xl:text-base font-semibold tracking-[0.15em] uppercase flex items-center gap-2 xl:gap-3">
+                                <FileDown className="w-3.5 xl:w-5 h-3.5 xl:h-5 opacity-50 group-hover:opacity-100 transition-opacity" />
+                                {dict.downloadResume}
+                            </span>
+                        </a>
                     </div>
                 </div>
 

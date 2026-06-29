@@ -1,29 +1,74 @@
 {
     "contact": {
-        "location": "Konya, Türkiye",
-        "email": "mustafw42@gmail.com",
-        "phone": "Not added yet."
+        "location": "Boston, MA",
+        "email": "malavia.m@northeastern.edu",
+        "phone": "(617) 645-1370"
     },
     "social": [
         {
             "label": "GitHub",
-            "href": "https://github.com/xkintaro"
+            "href": "https://github.com/manavmalavia18"
         },
         {
-            "label": "Discord",
-            "href": "https://discord.gg/NSQk27Zdkv"
+            "label": "LinkedIn",
+            "href": "https://linkedin.com/in/manavmalavia"
         },
         {
-            "label": "Instagram",
-            "href": "https://instagram.com/xkintaro"
+            "label": "Resume",
+            "href": "/Resume_Manav_Malavia.pdf"
         },
         {
-            "label": "Linkedin",
-            "href": "https://www.linkedin.com/in/mustafa-tasal/"
+            "label": "Email",
+            "href": "mailto:malavia.m@northeastern.edu"
         }
     ],
     "stack": {
-        "frontend": [
+        "languages": [
+            {
+                "name": "Python",
+                "icon": "/stack/python.svg",
+                "featured": true
+            },
+            {
+                "name": "TypeScript",
+                "icon": "/stack/typescript.svg",
+                "featured": true
+            },
+            {
+                "name": "JavaScript",
+                "icon": "/stack/javascript.svg",
+                "featured": true
+            },
+            {
+                "name": "Go",
+                "icon": "/stack/go.svg"
+            },
+            {
+                "name": "Java",
+                "icon": "/stack/java.svg"
+            },
+            {
+                "name": "C# / .NET",
+                "icon": "/stack/csharp.svg"
+            },
+            {
+                "name": "SQL",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Bash",
+                "icon": "/stack/bash.svg"
+            },
+            {
+                "name": "HTML",
+                "icon": "/stack/html5.svg"
+            },
+            {
+                "name": "CSS",
+                "icon": "/stack/css3.svg"
+            }
+        ],
+        "frameworks": [
             {
                 "name": "React",
                 "icon": "/stack/react.svg",
@@ -35,74 +80,68 @@
                 "featured": true
             },
             {
-                "name": "Tailwind CSS",
-                "icon": "/stack/tailwindcss.svg",
-                "featured": true
+                "name": "FastAPI",
+                "icon": "/stack/fastapi.svg"
             },
             {
-                "name": "Bootstrap",
-                "icon": "/stack/bootstrap.svg"
+                "name": "Flask",
+                "icon": "/stack/flask.svg"
             },
             {
-                "name": "Framer Motion",
-                "icon": "/stack/framermotion.svg"
+                "name": "Django",
+                "icon": "/stack/django.svg"
             },
-            {
-                "name": "TypeScript",
-                "icon": "/stack/typescript.svg"
-            },
-            {
-                "name": "JavaScript",
-                "icon": "/stack/javascript.svg"
-            },
-            {
-                "name": "HTML5",
-                "icon": "/stack/html5.svg"
-            },
-            {
-                "name": "CSS3",
-                "icon": "/stack/css3.svg"
-            }
-        ],
-        "backend": [
             {
                 "name": "Node.js",
-                "icon": "/stack/nodejs.svg"
-            },
-            {
-                "name": "PHP",
-                "icon": "/stack/php.svg"
-            },
-            {
-                "name": "Laravel",
-                "icon": "/stack/laravel.svg",
+                "icon": "/stack/nodejs.svg",
                 "featured": true
             },
             {
-                "name": "ASP.NET",
-                "icon": "/stack/aspnet.svg"
+                "name": "Spring Boot",
+                "icon": "/stack/springboot.svg"
             },
             {
-                "name": "Rust",
-                "icon": "/stack/rust.svg"
+                "name": "REST APIs",
+                "icon": "/stack/generic.svg"
             },
             {
-                "name": "C#",
-                "icon": "/stack/csharp.svg"
+                "name": "WebSocket",
+                "icon": "/stack/generic.svg"
             },
             {
-                "name": "Python",
-                "icon": "/stack/python.svg"
+                "name": "Microservices",
+                "icon": "/stack/generic.svg"
             },
             {
-                "name": "Discord.js",
-                "icon": "/stack/discordjs.svg"
+                "name": "Swagger / OpenAPI",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Socket.IO",
+                "icon": "/stack/socketio.svg"
+            },
+            {
+                "name": "OAuth 2.0",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "JWT",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Tailwind CSS",
+                "icon": "/stack/tailwindcss.svg"
             }
         ],
-        "database": [
+        "databases": [
             {
                 "name": "PostgreSQL",
                 "icon": "/stack/postgresql.svg",
+                "featured": true
+            },
+            {
+                "name": "MongoDB",
+                "icon": "/stack/mongodb.svg",
                 "featured": true
             },
             {
@@ -111,32 +150,182 @@
                 "featured": true
             },
             {
-                "name": "MongoDB",
-                "icon": "/stack/mongodb.svg"
+                "name": "Redis",
+                "icon": "/stack/redis.svg"
+            }
+        ],
+        "messaging": [
+            {
+                "name": "Kafka",
+                "icon": "/stack/kafka.svg"
             },
             {
-                "name": "Prisma",
-                "icon": "/stack/prisma.svg"
+                "name": "Celery",
+                "icon": "/stack/generic.svg"
             },
             {
-                "name": "Neon",
-                "icon": "/stack/neon.png"
+                "name": "RabbitMQ",
+                "icon": "/stack/rabbitmq.svg"
+            },
+            {
+                "name": "Data Pipelines",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Async Processing",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Query Optimization",
+                "icon": "/stack/generic.svg"
+            }
+        ],
+        "cloud": [
+            {
+                "name": "AWS",
+                "icon": "/stack/aws.svg",
+                "featured": true
+            },
+            {
+                "name": "GCP",
+                "icon": "/stack/gcp.svg",
+                "featured": true
+            },
+            {
+                "name": "Azure",
+                "icon": "/stack/azure.svg"
+            },
+            {
+                "name": "Docker",
+                "icon": "/stack/docker.svg",
+                "featured": true
+            },
+            {
+                "name": "Kubernetes",
+                "icon": "/stack/kubernetes.svg",
+                "featured": true
+            },
+            {
+                "name": "Terraform",
+                "icon": "/stack/terraform.svg"
+            },
+            {
+                "name": "Helm",
+                "icon": "/stack/helm.svg"
+            },
+            {
+                "name": "Argo CD",
+                "icon": "/stack/argocd.svg"
+            },
+            {
+                "name": "GitHub Actions",
+                "icon": "/stack/githubactions.svg"
+            },
+            {
+                "name": "GitLab CI/CD",
+                "icon": "/stack/gitlabcicd.svg"
+            },
+            {
+                "name": "Linux",
+                "icon": "/stack/linux.svg"
+            },
+            {
+                "name": "NGINX",
+                "icon": "/stack/nginx.svg"
+            },
+            {
+                "name": "AWS Cognito",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "AWS EKS",
+                "icon": "/stack/awseks.svg"
+            },
+            {
+                "name": "GCP GKE",
+                "icon": "/stack/gcpgke.svg"
             }
         ],
         "tools": [
             {
+                "name": "Prometheus",
+                "icon": "/stack/prometheus.svg",
+                "featured": true
+            },
+            {
+                "name": "Grafana",
+                "icon": "/stack/grafana.svg",
+                "featured": true
+            },
+            {
+                "name": "Sentry",
+                "icon": "/stack/sentry.svg"
+            },
+            {
+                "name": "CloudWatch",
+                "icon": "/stack/cloudwatch.svg"
+            },
+            {
                 "name": "Git",
-                "icon": "/stack/git.svg"
+                "icon": "/stack/git.svg",
+                "featured": true
             },
             {
-                "name": "Vercel",
-                "icon": "/stack/vercel.svg"
+                "name": "Playwright",
+                "icon": "/stack/playwright.svg"
             },
             {
-                "name": "Tauri",
-                "icon": "/stack/tauri.svg"
+                "name": "Cypress",
+                "icon": "/stack/cypress.svg"
+            },
+            {
+                "name": "Jira",
+                "icon": "/stack/jira.svg"
+            },
+            {
+                "name": "Stripe",
+                "icon": "/stack/stripe.svg"
+            },
+            {
+                "name": "Twilio",
+                "icon": "/stack/twilio.svg"
+            },
+            {
+                "name": "Microsoft Graph",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Tableau",
+                "icon": "/stack/tableau.svg"
+            },
+            {
+                "name": "Pandas",
+                "icon": "/stack/pandas.svg"
+            },
+            {
+                "name": "NumPy",
+                "icon": "/stack/numpy.svg"
+            },
+            {
+                "name": "Claude API",
+                "icon": "/stack/claudeapi.svg"
+            },
+            {
+                "name": "Cursor AI",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Claude Code",
+                "icon": "/stack/claudecode.svg"
+            },
+            {
+                "name": "RAG",
+                "icon": "/stack/generic.svg"
+            },
+            {
+                "name": "Framer Motion",
+                "icon": "/stack/framermotion.svg"
             }
         ]
     }
 }
-

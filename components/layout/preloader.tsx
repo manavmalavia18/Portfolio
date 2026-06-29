@@ -86,11 +86,11 @@ export function Preloader() {
                             <div className="absolute inset-3 rounded-full border border-border/50 bg-secondary/5 backdrop-blur-md" />
 
                             <Image
-                                src="/logo.png"
-                                alt="Logo"
+                                src="/logo.svg"
+                                alt="Manav Malavia"
                                 width={56}
                                 height={56}
-                                className="object-contain z-10"
+                                className="object-contain z-10 dark:invert"
                                 priority
                             />
                         </div>
